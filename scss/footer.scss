@@ -1,0 +1,117 @@
+
+.container-fluid.footer{
+    background-color: $color-principal;
+    padding: 80px 0px 80px 0px;
+
+        .container.footer{
+            display: inline-block;
+            justify-content: center;
+            
+
+                .logo-footer{
+                    display: flex;
+                    justify-content: center;
+
+                    .logo-footer-elemento{
+                        width: 60px;
+                        padding-bottom: 30px;
+                        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+                        cursor: pointer;
+
+                        
+                    }
+
+                    .logo-footer-elemento:hover{
+                        transform: scale(1.03);
+                    }
+                   
+                }
+
+                .reseña-footer{
+
+                        .parrafo-reseña{
+                            display: flex;
+                            text-align: center;
+                            justify-content: center;
+                            color: $color-blanco;
+                            font-size: 1.25rem;
+                            padding-top: 20px;
+                            margin-bottom: 40px;
+                        }
+                }
+
+                .rrss-footer{
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    .icono-rrss{
+                        text-decoration: none;
+
+                        .jam-linkedin-square {
+                            fill: $color-blanco;
+                            transition: fill 0.3s ease, transform 0.3s ease;
+                            
+                            
+                          }
+                          
+                          .jam-linkedin-square:hover {
+                            transform: translateY(-3px);
+                            fill: $color-secundario;
+                          }
+
+                          .jam-github-square {
+                            fill:$color-blanco;
+                            transition: fill 0.3s ease, transform 0.3s ease;
+                           
+                          }
+                          
+                          .jam-github-square:hover {
+                            transform: translateY(-5px);
+                            fill: $color-secundario;
+                          }
+                    }
+                }
+
+            
+
+                .menu-footer{
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 40px;
+                    
+                        .footer-link{
+                            text-decoration: none;
+                            color: $color-blanco;
+                            margin-inline: 15px;
+                            font-size: 1.25rem;
+                            font-weight: 500;
+                            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+                        }
+
+                        .footer-link:hover{
+                            transform: scale(1.03);
+                            color: $color-secundario;
+                        }
+
+                        
+                }
+
+
+                .copyrigth{
+                    display: flex;
+                    justify-content: center;
+
+                        .parrafo-copyrigth{
+                            display: flex;
+                            text-align: center;
+                            justify-content: center;
+                            color: $color-blanco;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            padding: 40px 200px 0px 200px;
+                        }
+                }
+        }
+}
