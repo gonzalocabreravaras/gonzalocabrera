@@ -1,5 +1,5 @@
 
-header{
+/** header{
     position: fixed;
     width: 100%;
     height: 80px;
@@ -8,10 +8,13 @@ header{
     background-color: $color-blanco;
     transition: 0.4s;
     @include fadeIn;
+    z-index: 2;
 
         .container{
             display: flex;
             align-items: center;
+            justify-content: space-between; /* Para distribuir el espacio entre los elementos
+            width: 100%;
 
             .logo{
                 align-items: center;
@@ -71,6 +74,13 @@ header{
     
             }
 
+            @media (max-width: 768px) {
+                .nav {
+                    display: none;
+                }
+            }
+
+
             .rrss{
                 width: 8%;
                 display: flex;
@@ -110,6 +120,52 @@ header{
                     }
             }
 
+            @media (max-width: 768px) {
+                .rrss {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .bars__menu {
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+    
+                    span {
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        border-radius: 50px;
+                        background-color: #171717;
+                        margin-top: 6px;
+                        transform-origin: 0px 100%;
+                        transition: all 300ms;
+                    }
+    
+    
+                       
+                }
+    
+                .activeline1__bars-menu{
+                    transform: rotate(45deg) translate(-5px, 0px);
+                }
+                
+                .activeline2__bars-menu{
+                    opacity: 0;
+                    margin-left: -30px;
+                }
+                
+                
+                .activeline3__bars-menu{
+                    transform: rotate(-45deg) translate(-2px, -1px);
+                } 
+            }
+
+            
+
+            
+
 }
 
 
@@ -119,3 +175,245 @@ header.sticky{
     background-color: $color-blanco;
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.05);
 }
+
+**/
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-blanco;
+    height: 80px;
+    width: 100%;
+    transition: heigth 0.3s ease;
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $color-blanco;
+
+
+                .logo {
+                    max-width: 50px;
+                }
+
+                .abrir-menu, .cerrar-menu {
+                    display: none;       
+                }
+
+                .nav {
+
+                        .rrss-mobile{
+                            display: none;
+                        }
+                }
+
+                @media screen and (max-width: 768px){
+
+                    .abrir-menu,
+                    .cerrar-menu {
+                        display: block;
+                        border: 0;
+                        font-size: 40px;
+                        background-color: transparent;
+                        cursor: pointer;
+                    }
+
+                    .abrir-menu {
+                        color: $color-negro;
+                    }
+
+                    .cerrar-menu {
+                        color: $color-blanco;
+                        font-size: 50px;
+                    }
+
+                    .nav {
+                        opacity: 0;
+                        visibility: hidden;
+                        position: fixed;
+                        padding: 20px 40px 0px 0px;
+                        z-index: 1000;
+
+                            .rrss-mobile {
+                                display: flex;
+                                flex-direction: row;
+                                padding: 30px 14px 0px 0px;
+                                gap: 15px;
+
+                                .icono-rrss{
+                                    text-decoration: none;
+                                    justify-content: end;     
+        
+                                        .jam-linkedin-square {
+                                            fill: $color-blanco;
+                                            transition: fill 0.3s ease, transform 0.3s ease;
+                                            width: 40px;
+
+                                        }
+                                        
+                                        .jam-linkedin-square:hover {
+                                            fill: $color-secundario;
+                                            transform: translateY(-3px);
+                                        }
+        
+                                        .jam-github-square {
+                                            fill:$color-blanco;
+                                            transition: fill 0.3s ease, transform 0.3s ease;
+                                            width: 40px;
+
+                                        
+                                        }
+                                        
+                                        .jam-github-square:hover {
+                                            fill: $color-secundario;
+                                            transform: translateY(-5px);
+                                        }
+                                }
+                            }
+                    }
+
+                    .nav {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                        gap: 20px;
+                        top: 0;
+                        right: 0;
+                        width:75%;
+                        height: 100%;
+                        background-color: $color-principal;
+                        box-shadow: 0 0 0 100vmax #614cff48; 
+                        z-index: 2;
+
+                    }
+
+                    .nav.visible {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .nav-list {
+                        flex-direction: column;
+                        align-items: end;
+                    }
+
+                    .rrss {
+                        display: none;
+                    }
+                }
+
+                .nav-list {
+                    list-style: none;
+                    display: flex;
+                    margin: 0px;
+                    gap: 10px;
+                    text-decoration: none;
+
+                        .nav-link {
+                            font-size: 18px;
+                            padding: 15px;
+                            font-weight: 500;
+                            text-decoration: none;
+                            color: #6a6a6a;                
+                        }
+                    
+                        .nav-link:hover {
+                            font-size: 18px;
+                            padding: 15px;
+                            color: $color-principal;
+                        }
+
+                        .nav-link.active{
+                            color: $color-principal;      
+                            font-weight: 600;
+                            color: $color-principal;                          
+                            transition: color 1s ease;        
+                        }
+
+                        @media screen and (max-width: 768px){
+                            .nav-link {
+                                color: $color-blanco;
+                                font-size: 30px;
+                            }
+
+                            .nav-link:hover {
+                                color: $color-secundario;
+                                font-size: 30px;
+                            }
+
+                            .nav-link.active {
+                                color: $color-secundario;      
+                                font-weight: 600;                     
+                                transition: color 1s ease;        
+                            }
+                        }
+                }
+
+                
+
+                .rrss{
+                    width: 8%;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    gap: 10px;
+
+
+                        .icono-rrss{
+                            text-decoration: none;
+                            justify-content: end;     
+
+                                .jam-linkedin-square {
+                                    fill: $color-negro;
+                                    transition: fill 0.3s ease, transform 0.3s ease;
+                                                      
+                                }
+                                
+                                .jam-linkedin-square:hover {
+                                    fill: #604cff;
+                                    transform: translateY(-3px);
+                                }
+
+                                .jam-github-square {
+                                    fill:$color-negro;
+                                    transition: fill 0.3s ease, transform 0.3s ease;
+
+                                
+                                }
+                                
+                                .jam-github-square:hover {
+                                    fill: #604cff;
+                                    transform: translateY(-5px);
+                                }
+                        }
+                }
+
+                @media screen and (max-width: 768px){
+                    .rrss {
+                        display: none;
+                    }
+                }
+                
+    }
+
+    
+}
+
+
+    
+
+
