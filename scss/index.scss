@@ -199,6 +199,10 @@
 
         .card-elemento {
             width: 100%;
+
+            .skills{
+                font-size: 14px;
+            }
         }
     }
 
@@ -403,6 +407,10 @@
                     height: auto;
                 }
 
+                .skills{
+                    font-size: 14px;
+                }
+
                 
             }   
     }
@@ -420,7 +428,7 @@
     justify-content: center;
     align-items: center;
     padding: 150px 0px 150px 0px;
-    background-image: url(/assets/images/backgorund-blanco.jpg);
+    background-image: url(./assets/images/backgorund-blanco.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -459,6 +467,13 @@
 
                             .parrafo-form{
                                 text-align: center;
+                            }
+                        }
+
+                        .form {
+
+                            label{
+                                z-index: 0;
                             }
                         }
                      }

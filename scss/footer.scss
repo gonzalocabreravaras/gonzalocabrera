@@ -98,6 +98,16 @@
                         
                 }
 
+                @media (max-width: 768px) {
+                    .menu-footer {
+
+                            .footer-link {
+                                font-size: 16px;
+                                margin-inline: 5px;
+                            }
+                    }
+                }
+
 
                 .copyrigth {
                     display: flex;
@@ -119,7 +129,7 @@
                         width: 100%;
 
                             .parrafo-copyrigth {
-                                padding: 40px 0px 40px 0px;
+                                padding: 40px 0px 0px 0px;
                             }
                     }
                     
