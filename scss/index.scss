@@ -132,7 +132,7 @@
     display: flex;
     padding: 150px;
     border-radius: 8px;
-    padding: 100px 50px 100px 50px ;
+    padding: 100px 50px 100px 50px;
     margin-top: -130px;
     margin-bottom: 45px;
     background-color: $color-blanco;
@@ -144,7 +144,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0px 50px 0px 50px;
+            padding: 0px 15px 0px 15px;
             width: 50%;
         
         }
@@ -428,7 +428,7 @@
     justify-content: center;
     align-items: center;
     padding: 150px 0px 150px 0px;
-    background-image: url(./assets/images/backgorund-blanco.jpg);
+    background-image: url(/assets/images/backgorund-blanco.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
