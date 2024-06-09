@@ -877,6 +877,16 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   cursor: default;
 }
 
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 80px;
+  }
+  .cards .card-elemento {
+    width: 100%;
+  }
+}
 .proyectos-texto {
   display: inline;
   justify-content: center;
@@ -905,8 +915,12 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   justify-content: center;
   color: #171717;
   font-size: 1.25rem;
-  padding-top: 20px;
-  padding: 0px 200px 0px 200px;
+  padding: 20px 200px 0px 200px;
+}
+@media (max-width: 768px) {
+  .proyectos-texto .parrafo-proyecto {
+    padding: 20px 0px 0px 0px;
+  }
 }
 
 .proyectos {
@@ -918,6 +932,11 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   display: flex;
   padding-bottom: 130px;
   gap: 100px;
+}
+@media (max-width: 768px) {
+  .proyectos .proyecto-elemento {
+    flex-direction: column;
+  }
 }
 .proyectos .proyecto-elemento-texto {
   display: inline-block;
@@ -1037,6 +1056,17 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   color: #171717;
   font-size: 1.25rem;
 }
+@media (max-width: 768px) {
+  .container-fluid.form .container.form .container-texto-form {
+    width: 100%;
+  }
+  .container-fluid.form .container.form .container-texto-form .titulo-form {
+    justify-content: center;
+  }
+  .container-fluid.form .container.form .container-texto-form .parrafo-form {
+    text-align: center;
+  }
+}
 .container-fluid.form .container.form .container-form {
   display: flex;
   width: 50%;
@@ -1076,7 +1106,23 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
 .container-fluid.form .container.form .container-form .form svg {
   margin-left: 5px;
 }
+@media (max-width: 768px) {
+  .container-fluid.form .container.form .container-form {
+    display: flex;
+    width: 100%;
+  }
+}
 
+@media (max-width: 768px) {
+  .container-fluid.form {
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .container-fluid .form {
+    flex-direction: column;
+  }
+}
 /*BODY*/
 .container-fluid.footer {
   background-color: #604cff;
@@ -1162,6 +1208,14 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   font-size: 1rem;
   font-weight: 400;
   padding: 40px 200px 0px 200px;
+}
+@media screen and (max-width: 768px) {
+  .container-fluid.footer .container.footer .copyrigth {
+    width: 100%;
+  }
+  .container-fluid.footer .container.footer .copyrigth .parrafo-copyrigth {
+    padding: 40px 0px 40px 0px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

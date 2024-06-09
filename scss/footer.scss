@@ -99,7 +99,7 @@
                 }
 
 
-                .copyrigth{
+                .copyrigth {
                     display: flex;
                     justify-content: center;
 
@@ -112,6 +112,17 @@
                             font-weight: 400;
                             padding: 40px 200px 0px 200px;
                         }
+                }
+
+                @media screen and (max-width: 768px) {
+                    .copyrigth {
+                        width: 100%;
+
+                            .parrafo-copyrigth {
+                                padding: 40px 0px 40px 0px;
+                            }
+                    }
+                    
                 }
         }
 }
