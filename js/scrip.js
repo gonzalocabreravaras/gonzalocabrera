@@ -79,4 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    let lastScrollTop = 0;
 
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scroll hacia abajo, ocultar el header
+            header.classList.add('hide');
+        } else {
+            // Scroll hacia arriba, mostrar el header
+            header.classList.remove('hide');
+        }
+
+        lastScrollTop = scrollTop;
+    });
+});
