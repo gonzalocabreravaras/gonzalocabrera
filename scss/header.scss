@@ -242,11 +242,13 @@ header {
                     }
 
                     .nav {
-                        opacity: 0;
-                        visibility: hidden;
+                        transform: translateX(100%);
+                        transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
                         position: fixed;
                         padding: 20px 40px 0px 0px;
                         z-index: 1000;
+                        box-shadow: 0 0 0 100vmax transparent;
+                        opacity: 0;
 
                             .rrss-mobile {
                                 display: flex;
@@ -295,13 +297,14 @@ header {
                         right: 0;
                         width:75%;
                         height: 100%;
-                        background-color: $color-principal;
-                        box-shadow: 0 0 0 100vmax #614cff48; 
+                        background-color: $color-principal; 
                         z-index: 2;
 
                     }
 
                     .nav.visible {
+                        transform: translateX(0);
+                        box-shadow: 0 0 0 100vmax #614cff48; 
                         opacity: 1;
                         visibility: visible;
                     }

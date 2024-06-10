@@ -554,11 +554,13 @@ header .container .nav .rrss-mobile {
     font-size: 50px;
   }
   header .container .nav {
-    opacity: 0;
-    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
     position: fixed;
     padding: 20px 40px 0px 0px;
     z-index: 1000;
+    box-shadow: 0 0 0 100vmax transparent;
+    opacity: 0;
   }
   header .container .nav .rrss-mobile {
     display: flex;
@@ -598,10 +600,11 @@ header .container .nav .rrss-mobile {
     width: 75%;
     height: 100%;
     background-color: #604cff;
-    box-shadow: 0 0 0 100vmax rgba(97, 76, 255, 0.2823529412);
     z-index: 2;
   }
   header .container .nav.visible {
+    transform: translateX(0);
+    box-shadow: 0 0 0 100vmax rgba(97, 76, 255, 0.2823529412);
     opacity: 1;
     visibility: visible;
   }
@@ -697,7 +700,7 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   align-items: center;
   text-align: center;
   height: 100vh;
-  background-image: url(/assets/images/backgorund-blanco.jpg);
+  background-image: url(../assets/images/backgorund-blanco.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1066,7 +1069,7 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   justify-content: center;
   align-items: center;
   padding: 150px 0px 150px 0px;
-  background-image: url(/assets/images/backgorund-blanco.jpg);
+  background-image: url(../assets/images/backgorund-blanco.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

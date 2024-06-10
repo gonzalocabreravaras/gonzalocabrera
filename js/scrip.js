@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
 /**MENÚ BURGER*/
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
@@ -20,11 +18,11 @@ const cerrar = document.querySelector("#cerrar");
 
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
-})
+});
 
 cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
-})
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -58,4 +56,27 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    });
+
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove("visible");
+        });
+    });
+});
+
 
