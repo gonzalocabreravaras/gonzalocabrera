@@ -748,7 +748,7 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
     opacity: 1;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .banner .titulo-principal {
     display: none;
   }
@@ -808,7 +808,7 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   height: 33px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .banner {
     height: 80vh;
   }
@@ -908,6 +908,19 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
     font-size: 14px;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards {
+    flex-direction: column;
+    padding: 60px 80px;
+    gap: 80px;
+  }
+  .cards .card-elemento {
+    width: 100%;
+  }
+  .cards .card-elemento .skills {
+    font-size: 14px;
+  }
+}
 .proyectos-texto {
   display: inline;
   justify-content: center;
@@ -938,9 +951,14 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   font-size: 1.25rem;
   padding: 20px 200px 0px 200px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .proyectos-texto .parrafo-proyecto {
     padding: 20px 0px 0px 0px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .proyectos-texto .parrafo-proyecto {
+    padding: 20px 100px 0px 100px;
   }
 }
 
@@ -953,36 +971,49 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   display: flex;
   padding-bottom: 130px;
   gap: 100px;
+  width: 100%;
 }
-.proyectos .proyecto-elemento-texto {
-  display: inline-block;
-  align-content: center;
+.proyectos .proyecto-elemento .proyecto-elemento-imagen {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0px;
+  width: 50%;
 }
-.proyectos .proyecto-elemento-texto .titulo-proyecto-elemento {
-  font-size: 1.875rem;
-  font-weight: 600;
-  color: #171717;
-}
-.proyectos .proyecto-elemento-imagen img {
-  width: 600px;
+.proyectos .proyecto-elemento .proyecto-elemento-imagen img {
+  width: 100%;
   border-radius: 8px;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.06), -8px -8px 4cap rgba(0, 0, 0, 0.06);
 }
-.proyectos .proyecto-elemento-imagen img:hover {
+.proyectos .proyecto-elemento .proyecto-elemento-imagen .proyecto-elemento-imagen img:hover {
   transform: translateY(-5px);
 }
-.proyectos .parrafo-proyecto-elemento {
+.proyectos .proyecto-elemento .proyecto-elemento-texto {
+  display: inline-block;
+  align-content: center;
+  width: 50%;
+}
+.proyectos .proyecto-elemento .proyecto-elemento-texto .titulo-proyecto-elemento {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #171717;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .proyectos .proyecto-elemento .proyecto-elemento-texto .parrafo-proyecto-elemento {
+    padding: 0px 100px;
+  }
+}
+.proyectos .proyecto-elemento .proyecto-elemento-texto .parrafo-proyecto-elemento {
   color: #6a6a6a;
   font-size: 1.125rem;
 }
-.proyectos .container-skills {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .container-skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
   margin-left: -5px;
 }
-.proyectos .skills {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .skills {
   border: none;
   padding: 8px 15px 8px 15px;
   border-radius: 8px;
@@ -991,11 +1022,11 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   font-weight: 500;
   cursor: default;
 }
-.proyectos .botones {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .botones {
   display: flex;
   gap: 20px;
 }
-.proyectos .botones .boton-secundario {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .botones .boton-secundario {
   display: inline;
   justify-content: center;
   background-color: #604cff;
@@ -1010,11 +1041,11 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.proyectos .botones .boton-secundario:hover {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .botones .boton-secundario:hover {
   background-color: #604cff;
   transform: translateY(-5px);
 }
-.proyectos .botones .boton-terciario {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .botones .boton-terciario {
   display: inline;
   justify-content: center;
   border: solid 2px #604cff;
@@ -1028,19 +1059,61 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.proyectos .botones .boton-terciario:hover {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .botones .boton-terciario:hover {
   background-color: #604cff;
   transform: translateY(-5px);
   color: #ffffff;
 }
-.proyectos .botones .boton-terciario path {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .botones .boton-terciario path {
   transition: stroke 0s;
 }
-.proyectos .botones .boton-terciario:hover path {
+.proyectos .proyecto-elemento .proyecto-elemento-texto .botones .boton-terciario:hover path {
   stroke: #ffffff;
 }
+@media (max-width: 1024px) {
+  .proyectos .proyectos {
+    padding: 0px;
+  }
+  .proyectos .proyectos .proyecto-elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 60px;
+  }
+  .proyectos .proyectos .proyecto-elemento .proyecto-elemento-texto {
+    justify-content: center;
+    width: 100%;
+  }
+  .proyectos .proyectos .proyecto-elemento .proyecto-elemento-texto .titulo-proyecto-elemento {
+    justify-content: center;
+    text-align: center;
+  }
+  .proyectos .proyectos .proyecto-elemento .proyecto-elemento-texto .parrafo-proyecto-elemento {
+    justify-content: center;
+    text-align: center;
+  }
+  .proyectos .proyectos .proyecto-elemento .proyecto-elemento-texto .container-skills {
+    justify-content: center;
+  }
+  .proyectos .proyectos .proyecto-elemento .proyecto-elemento-texto .botones {
+    justify-content: center;
+  }
+  .proyectos .proyectos .proyecto-elemento .proyecto-elemento-imagen {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .proyectos .proyectos .proyecto-elemento .proyecto-elemento-imagen img {
+    max-width: 100%;
+    height: auto;
+  }
+  .proyectos .proyectos .proyecto-elemento .skills {
+    font-size: 14px;
+  }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .proyectos {
     padding: 0px;
   }
@@ -1049,30 +1122,6 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
     flex-direction: column;
     justify-content: center;
     gap: 60px;
-  }
-  .proyectos .proyecto-elemento .proyecto-elemento-texto {
-    justify-content: center;
-  }
-  .proyectos .proyecto-elemento .proyecto-elemento-texto .titulo-proyecto-elemento {
-    justify-content: center;
-    text-align: center;
-  }
-  .proyectos .proyecto-elemento .proyecto-elemento-texto .parrafo-proyecto-elemento {
-    justify-content: center;
-    text-align: center;
-  }
-  .proyectos .proyecto-elemento .proyecto-elemento-texto .container-skills {
-    justify-content: center;
-  }
-  .proyectos .proyecto-elemento .proyecto-elemento-texto .botones {
-    justify-content: center;
-  }
-  .proyectos .proyecto-elemento .proyecto-elemento-imagen img {
-    max-width: 100%;
-    height: auto;
-  }
-  .proyectos .proyecto-elemento .skills {
-    font-size: 14px;
   }
 }
 .container-fluid.form {
@@ -1091,54 +1140,54 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   display: flex;
   gap: 70px;
 }
-.container-fluid.form .container.form .container-texto-form {
+.container-fluid.form .container-texto-form {
   display: flex;
   width: 50%;
   align-items: center;
 }
-.container-fluid.form .container.form .container-texto-form .titulo-form {
+.container-fluid.form .container-texto-form .titulo-form {
   display: flex;
   font-size: 2.5rem;
   font-weight: 600;
   color: #171717;
 }
-.container-fluid.form .container.form .container-texto-form .parrafo-form {
+.container-fluid.form .container-texto-form .parrafo-form {
   display: flex;
   color: #171717;
   font-size: 1.25rem;
 }
-@media (max-width: 768px) {
-  .container-fluid.form .container.form .container-texto-form {
+@media (max-width: 1024px) {
+  .container-fluid.form .container-texto-form {
     width: 100%;
   }
-  .container-fluid.form .container.form .container-texto-form .titulo-form {
+  .container-fluid.form .container-texto-form .titulo-form {
     justify-content: center;
   }
-  .container-fluid.form .container.form .container-texto-form .parrafo-form {
+  .container-fluid.form .container-texto-form .parrafo-form {
     text-align: center;
   }
-  .container-fluid.form .container.form .form label {
+  .container-fluid.form .form label {
     z-index: 0;
   }
 }
-.container-fluid.form .container.form .container-form {
+.container-fluid.form .container-form {
   display: flex;
   width: 50%;
 }
-.container-fluid.form .container.form .container-form .form {
+.container-fluid.form .container-form .form {
   display: block;
   width: 100%;
   color: #6a6a6a;
 }
-.container-fluid.form .container.form .container-form .form .custom-input {
+.container-fluid.form .container-form .form .custom-input {
   border-radius: 8px;
   border-width: 2px;
 }
-.container-fluid.form .container.form .container-form .form .custom-input:focus {
+.container-fluid.form .container-form .form .custom-input:focus {
   border-color: #604cff;
   box-shadow: 0 0 0 0.25rem #ffffff;
 }
-.container-fluid.form .container.form .container-form .form .btn.custom-btn {
+.container-fluid.form .container-form .form .btn.custom-btn {
   font-family: "Source Sans 3", sans-serif;
   display: inline;
   width: 100%;
@@ -1154,29 +1203,40 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.container-fluid.form .container.form .container-form .form .btn.custom-btn:hover {
+.container-fluid.form .container-form .form .btn.custom-btn .btn.custom-btn:hover {
   transform: translateY(-5px);
 }
-.container-fluid.form .container.form .container-form .form svg {
+.container-fluid.form .container-form .form .btn.custom-btn svg {
   margin-left: 5px;
 }
-@media (max-width: 768px) {
-  .container-fluid.form .container.form .container-form {
+@media (max-width: 1024px) {
+  .container-fluid.form .container-form {
     display: flex;
     width: 100%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container-fluid.form {
     height: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container-fluid .form {
     flex-direction: column;
   }
 }
+.btn-enviando {
+  background-color: #ccc; /* Cambia a un color gris claro */
+  cursor: not-allowed; /* Cambia el cursor a no permitido */
+}
+
+/* Estilo del botón en estado de mensaje enviado */
+.btn-enviado {
+  background-color: #4caf50; /* Cambia a un color verde */
+  cursor: not-allowed; /* Cambia el cursor a no permitido */
+}
+
 /*BODY*/
 .container-fluid.footer {
   background-color: #604cff;
