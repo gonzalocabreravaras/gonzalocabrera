@@ -86,11 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > lastScrollTop) {
+        if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
             // Scroll hacia abajo, ocultar el header
             header.classList.add('hide');
         } else {
-            // Scroll hacia arriba, mostrar el header
+            // Scroll hacia arriba o en la parte superior, mostrar el header
             header.classList.remove('hide');
         }
 
