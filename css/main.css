@@ -523,7 +523,7 @@ header.fixed {
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  top: 0; /* Coloca el header pegajoso en la parte superior de la ventana */
+  top: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 header.hide {
@@ -1227,14 +1227,13 @@ header .container .rrss .icono-rrss .jam-github-square:hover {
   }
 }
 .btn-enviando {
-  background-color: #ccc; /* Cambia a un color gris claro */
-  cursor: not-allowed; /* Cambia el cursor a no permitido */
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-/* Estilo del botón en estado de mensaje enviado */
 .btn-enviado {
-  background-color: #4caf50; /* Cambia a un color verde */
-  cursor: not-allowed; /* Cambia el cursor a no permitido */
+  background-color: #4caf50;
+  cursor: not-allowed;
 }
 
 /*BODY*/
